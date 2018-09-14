@@ -115,7 +115,7 @@ cdef class HTuple:
 
     def to_array_string(self):
         cdef int n = self.me.Length()
-        result = cnp.empty(n, dtype=np.object)
+        result = np.empty(n, dtype=np.object)
         for i in range(n):
             result[i] = self.me[i].C()
 
